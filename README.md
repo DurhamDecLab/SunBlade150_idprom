@@ -29,32 +29,32 @@ ok 1fff1000000 0 0 map-page
 
 This seems to be where some systems vary, the command isn't map-page in some guides, but that's what works here. Then enter details:
 
-[Start of IDPROM]
+[Start of IDPROM]\
 ok 1 1fd8 c!
 
-[Machine type 83 for Sun Blade 100 sun4u, byte 1 of serial #]
+[Machine type 83 for Sun Blade 100 sun4u, byte 1 of serial #]\
 ok 83 1fd9 c!
 
-[Ethernet address]
-ok 0 1fda c!
-ok 3 1fdb c!
-ok ba 1fdc c!
-ok 9 1fdd c!
-ok 57 1fde c!
+[Ethernet address]\
+ok 0 1fda c!\
+ok 3 1fdb c!\
+ok ba 1fdc c!\
+ok 9 1fdd c!\
+ok 57 1fde c!\
 ok d0 1fdf c!
 
-[Date code]
-ok 0 1fe0 c! 
-ok 0 1fe1 c!
-ok 3 1fe2 c!
+[Date code]\
+ok 0 1fe0 c! \
+ok 0 1fe1 c!\
+ok 3 1fe2 c!\
 ok ba 1fe3 c!
 
-[serial # bytes 2-4]
-ok 9 1fe4 c! 
-ok 57 1fe5 c!
+[serial # bytes 2-4]\
+ok 9 1fe4 c! \
+ok 57 1fe5 c!\
 ok d0 1fe6 c!
 
-[Checksum] 
+[Checksum] \
 ok 82 1fe7 c! 
 
 I cribbed these numbers from one of the links at the start, you can use other valid MAC address or serial but you'll need to work out the checksum - again, one of the other links mentioned that. Then do a reset-all, and it should come up without the warning, and showing a serial and network address. But if the battery is still dead, this will all be lost next time you shut down - you can apparently either buy a good eeprom, or modify the old one to take an external battery.
