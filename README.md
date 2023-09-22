@@ -29,7 +29,7 @@ ok 1fff1000000 0 0 map-page
 
 This seems to be where some systems vary, the command isn't map-page in some guides, but that's what works here. Then enter details:
 
-[Start of IDPROM]\
+[Start of IDPROM]\\
 ok 1 1fd8 c!
 
 [Machine type 83 for Sun Blade 100 sun4u, byte 1 of serial #]\
